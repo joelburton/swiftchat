@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31DCA63EB8F9329ADBE83BC7 /* ChatSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCA6591E621A0EAF5A19AF /* ChatSystem.swift */; };
+		31DCA795C91ABF91BE29F1E8 /* NSMutatableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCA0648EA7B0359EF1F37F /* NSMutatableAttributedString.swift */; };
 		5D1B59C124FB382500DF7A1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B59C024FB382500DF7A1C /* AppDelegate.swift */; };
 		5D1B59C324FB382500DF7A1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B59C224FB382500DF7A1C /* SceneDelegate.swift */; };
 		5D1B59C524FB382500DF7A1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B59C424FB382500DF7A1C /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31DCA0648EA7B0359EF1F37F /* NSMutatableAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutatableAttributedString.swift; sourceTree = "<group>"; };
+		31DCA6591E621A0EAF5A19AF /* ChatSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatSystem.swift; sourceTree = "<group>"; };
 		5D1B59BD24FB382500DF7A1C /* IBBasics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBBasics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1B59C024FB382500DF7A1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D1B59C224FB382500DF7A1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				5D1B59C924FB382700DF7A1C /* Assets.xcassets */,
 				5D1B59CB24FB382700DF7A1C /* LaunchScreen.storyboard */,
 				5D1B59CE24FB382700DF7A1C /* Info.plist */,
+				31DCA6591E621A0EAF5A19AF /* ChatSystem.swift */,
+				31DCA0648EA7B0359EF1F37F /* NSMutatableAttributedString.swift */,
 			);
 			path = IBBasics;
 			sourceTree = "<group>";
@@ -83,6 +89,9 @@
 			dependencies = (
 			);
 			name = IBBasics;
+			packageProductDependencies = (
+				5D1B59D524FC641900DF7A1C,
+			);
 			productName = IBBasics;
 			productReference = 5D1B59BD24FB382500DF7A1C /* IBBasics.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +120,9 @@
 				Base,
 			);
 			mainGroup = 5D1B59B424FB382500DF7A1C;
+			packageReferences = (
+				5D1B59D424FC641900DF7A1C,
+			);
 			productRefGroup = 5D1B59BE24FB382500DF7A1C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,6 +153,8 @@
 				5D1B59C524FB382500DF7A1C /* ViewController.swift in Sources */,
 				5D1B59C124FB382500DF7A1C /* AppDelegate.swift in Sources */,
 				5D1B59C324FB382500DF7A1C /* SceneDelegate.swift in Sources */,
+				31DCA63EB8F9329ADBE83BC7 /* ChatSystem.swift in Sources */,
+				31DCA795C91ABF91BE29F1E8 /* NSMutatableAttributedString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +352,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5D1B59D424FC641900DF7A1C = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/Starscream.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5D1B59D524FC641900DF7A1C = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D1B59D424FC641900DF7A1C;
+			productName = Starscream;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5D1B59B524FB382500DF7A1C /* Project object */;
 }
