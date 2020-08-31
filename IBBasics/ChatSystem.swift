@@ -2,6 +2,8 @@ import Foundation
 import Starscream
 
 let chatWsUrl = "http://joelburton-reactchat.herokuapp.com/chat"
+//let chatWsUrl = "http://localhost:3333/chat"
+let heartbeatInSeconds = 20.0
 
 let decoder = JSONDecoder()
 let encoder = JSONEncoder()
@@ -71,6 +73,11 @@ class ChatSystem: NSObject, WebSocketDelegate {
             isConnected = true
             print("websocket is connected: \(headers)")
             joinRoom(room)
+
+            Timer.scheduledTimer(withTimeInterval: heartbeatInSeconds, repeats: true) { timer in
+                self.socket.write(ping: Data(count: 1))
+            }
+
         case .disconnected(let reason, let code):
             isConnected = false
             print("websocket is disconnected: \(reason) with code: \(code)")
